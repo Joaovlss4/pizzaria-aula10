@@ -32,19 +32,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // Função para salvar alterações
-    document.getElementById('editarUsuarioForm').addEventListener('submit', async function (event) {
+    document.getElementById('formEditarUsuario').addEventListener('submit', async function (event) {
         event.preventDefault();
 
         const nome = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const senha = document.getElementById('password').value;
-        const confirmacaoSenha = document.getElementById('password_confirmation').value;
 
         const dadosUsuario = {
-            name: nome || undefined,
-            email: email || undefined,
-            password: senha || undefined,
-            password_confirmation: confirmacaoSenha || undefined,
+            name: nome,
+            email: email,
         };
 
         try {
